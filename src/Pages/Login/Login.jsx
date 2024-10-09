@@ -81,14 +81,14 @@ const Login = () => {
     try {
       if (signstate === "Sign In") {
         // Sign In API call
-        const res = await axios.post('https://bittu-private-backend.netlify.app/api/auth/signin', { email, password });
+        const res = await axios.post('https://netflix-clone-backend-e9ef.onrender.com/api/auth/signin', { email, password });
         console.log('Sign in successful:', res.data);
         // Optionally store token in local storage
         localStorage.setItem('token', res.data.token);
         window.location.reload();
       } else {
         // Sign Up API call
-        const res = await axios.post('https://bittu-private-backend.netlify.app/api/auth/signup', { name, email, password });
+        const res = await axios.post('https://netflix-clone-backend-e9ef.onrender.com/api/auth/signup', { name, email, password });
         console.log('Sign up successful:', res.data);
         // Optionally store token in local storage
         localStorage.setItem('token', res.data.token);
